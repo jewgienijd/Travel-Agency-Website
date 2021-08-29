@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- FONTS --------*/
+@font-face {
+  font-family: "GoogleSans";
+  src: url("../fonts/GoogleSans-Medium.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Volkhov";
+  src: url("../fonts/Volkhov-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/Poppins-SemiBold.ttf");
+}
+/* --------- VARIABLES -------- */
+/* --------- BREAKPOINT VARIABLES -------- */
+._container {
+  max-width: 1299px;
+  margin-left: 140px;
+}
+@media (max-width: 991.98px) {
+  ._container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header {
+    margin-top: 10px;
+  }
+}
+.header__top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__top-nav .header__menu {
+  margin-right: 135px;
+}
+@media (max-width: 991.98px) {
+  .header__top-nav .header__menu {
+    margin-right: 0;
+  }
+}
+@media (max-width: 768.98px) {
+  .header__top-nav .header__menu .menu__icon {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 15;
+  }
+  .header__top-nav .header__menu .menu__icon span {
+    transition: all 0.8s ease 0s;
+    top: calc(50% - 1px);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .header__top-nav .header__menu .menu__icon span:first-child {
+    top: 0px;
+  }
+  .header__top-nav .header__menu .menu__icon span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+}
+.header__top-nav .header__menu .menu__icon._active span {
+  transform: rotate(-45deg);
+  top: 15px;
+}
+.header__top-nav .header__menu .menu__icon._active span:first-child {
+  transform: rotate(45deg);
+}
+.header__top-nav .header__menu .menu__icon._active span:last-child {
+  height: 0;
+}
+.header__top-nav .header__menu .menu__body {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+@media (max-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body {
+    transform: translate(0px, -100%);
+    transition: transform 0.8s ease;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+  }
+}
+.header__top-nav .header__menu .menu__body._active {
+  transform: translate(0px, 0%);
+}
+@media (max-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body {
+    display: block;
+    text-align: center;
+    overflow: auto;
+  }
+}
+.header__top-nav .header__menu .menu__body li .menu__link {
+  text-decoration: none;
+  font-family: "GoogleSans";
+  font-size: 17px;
+  color: #212832;
+  padding-left: 50px;
+}
+@media (max-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body li .menu__link {
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    font-size: 40px;
+    padding-top: 40px;
+  }
+}
+.header__top-nav .header__menu .menu__body li .menu__btn {
+  display: inline-flex;
+  font-size: 17px;
+  font-family: "GoogleSans";
+  color: #212832;
+  text-decoration: none;
+  margin-left: 50px;
+  padding: 10px 20px;
+  border: 1px solid #212832;
+  border-radius: 4px;
+}
+@media (max-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body li .menu__btn {
+    font-size: 40px;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+.header__top-nav .header__menu .menu__body li .menu__dropdown {
+  margin-left: 50px;
+}
+@media (max-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body li .menu__dropdown {
+    margin: 40px auto;
+  }
+}
+.header__top-nav .header__menu .menu__body li .menu__dropdown .menu__language {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../img/Vector 1.png") no-repeat right;
+  background-position-x: calc(100% - 35px);
+  font-size: 17px;
+  font-family: "GoogleSans";
+  color: #212832;
+  border: none;
+}
+@media (max-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body li .menu__dropdown .menu__language {
+    display: none;
+  }
+}
+.header__top-nav .header__menu .menu__body li .menu__dropdown .menu__language:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

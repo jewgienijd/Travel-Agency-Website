@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- FONTS --------*/
+@font-face {
+    font-family: 'GoogleSans';
+    src: url('../fonts/GoogleSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Volkhov';
+    src: url('../fonts/Volkhov-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/Poppins-SemiBold.ttf');
+}
+
+/* --------- VARIABLES -------- */
+$fontGoogle: 'GoogleSans';
+$fontOpenSans: 'OpenSans';
+$fontVolkhov: 'Volkhov';
+$fontPopBold: 'Poppins-Bold';
+$fontPopMedium: 'Poppins-Medium';
+$fontPopRegular: 'Poppins-Regular';
+$fontPopSemiBold: 'Poppins-SemiBold';
+$colorMenu: #212832;
+
+/* --------- BREAKPOINT VARIABLES -------- */
+$maxWidthContainer: 1299;
+$md1: 1259.98;
+$md2: 991.98;
+$md3: 768.98;
+$md4: 479.98;
+
+._container {
+    max-width: $maxWidthContainer+px;
+    margin-left: 140px;
+    @media(max-width:$md2+px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.header {
+    @media(max-width:$md2+px) {
+        margin-top: 10px;
+    }
+    &__top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header__menu {
+            margin-right: 135px;
+            @media(max-width:$md2+px) {
+                margin-right: 0;
+            }
+            .menu__icon {
+                @media(max-width:$md3+px){
+                    display: block;
+                    position: relative;
+                    width: 30px;
+                    height: 18px;
+                    cursor: pointer;
+                    z-index: 15;
+                    span {
+                        transition: all 0.8s ease 0s;
+                        top: calc(50% - 1px);
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #000;
+                        &:first-child {
+                            top: 0px;
+                        }
+                        &:last-child {
+                            top: auto;
+                            bottom: 0px;
+                        }
+                    }
+                }
+                &._active {
+                    span {
+                        transform: rotate(-45deg);
+                        top: 15px;
+                        &:first-child {
+                            transform: rotate(45deg);
+                        }
+                        &:last-child {
+                            height: 0;
+                        }
+                    }
+                }
+            }
+            .menu__body {
+                @media(max-width:$md3+px){
+                    transform: translate(0px, -100%);
+                    transition: transform 0.8s ease;
+                    position: fixed;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    overflow: auto;
+                    background-color: rgb(255, 255, 255, 0.90);
+                    z-index: 10;
+                }
+                &._active {
+                    transform: translate(0px,0%);
+                }
+                display: flex;
+                list-style-type: none;
+                align-items: center;
+                @media(max-width:$md3+px){
+                    display: block;
+                    text-align: center;
+                    overflow: auto;
+                }
+                li {
+                    .menu__link {
+                        text-decoration: none;
+                        font-family: $fontGoogle;
+                        font-size: 17px;
+                        color: $colorMenu;
+                        padding-left: 50px;
+                        @media(max-width:$md3+px){
+                            display: flex;
+                            justify-content: center;
+                            padding-left: 0px;
+                            font-size: 40px;
+                            padding-top: 40px;
+                        }
+                    }
+                    .menu__btn {
+                        display: inline-flex;
+                        font-size: 17px;
+                        font-family: $fontGoogle;
+                        color: $colorMenu;
+                        text-decoration: none;
+                        margin-left: 50px; 
+                        padding: 10px 20px;
+                        border: 1px solid $colorMenu;
+                        border-radius: 4px;
+                        @media(max-width:$md3+px){
+                            font-size: 40px;
+                            margin-left: 0;
+                            margin-top: 40px;
+                        }                       
+                    } 
+                    .menu__dropdown {
+                        margin-left: 50px;
+                        @media(max-width:$md3+px){
+                            margin: 40px auto;
+                        } 
+                        .menu__language {
+                            appearance: none;
+                            background: url('../img/Vector\ 1.png') no-repeat right;
+                            background-position-x: calc(100% - 35px);
+                            font-size: 17px;
+                            font-family: $fontGoogle;
+                            color: $colorMenu;
+                            border: none;
+                            @media(max-width:$md3+px){
+                                display: none;
+                            }
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }                   
+                }
+            }
+        }
+    }
+}
+
