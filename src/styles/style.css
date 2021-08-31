@@ -436,6 +436,184 @@ body, html {
   }
 }
 
+/* --------- TOP SELLING SECTION -------- */
+.top-selling {
+  margin-top: 130px;
+  padding-right: 130px;
+}
+@media (max-width: 768.98px) {
+  .top-selling {
+    margin-top: 40px;
+    padding-right: 0px;
+  }
+}
+.top-selling__header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media (max-width: 768.98px) {
+  .top-selling__header {
+    margin-bottom: 5px;
+  }
+}
+.top-selling__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media (max-width: 768.98px) {
+  .top-selling__title {
+    margin-bottom: 20px;
+  }
+}
+.top-selling__items {
+  display: flex;
+  margin-bottom: 30px;
+  background: url("/src/img/top-selling/bg.png") no-repeat;
+  background-position: right;
+}
+@media (max-width: 768.98px) {
+  .top-selling__items {
+    background: none;
+    overflow: auto;
+  }
+}
+.top-selling__item {
+  flex-basis: 33%;
+  margin: 0 3% 0 3%;
+  border-radius: 24px;
+  filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+}
+@media (max-width: 768.98px) {
+  .top-selling__item {
+    flex: 0 0 85%;
+  }
+}
+.top-selling__item_container {
+  margin-top: 320px;
+  background-color: #fff;
+  padding: 25px 20px 30px 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+@media (max-width: 768.98px) {
+  .top-selling__item_container {
+    margin-top: 220px;
+    padding: 10px;
+  }
+}
+.top-selling__item_info {
+  display: flex;
+  justify-content: space-between;
+}
+.top-selling__item_days {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+@media (max-width: 768.98px) {
+  .top-selling__item_days {
+    padding-top: 5px;
+  }
+}
+.top-selling__destination, .top-selling__price {
+  font-family: "Poppins-Medium";
+  font-size: 18px;
+  color: #5E6282;
+}
+.top-selling__days {
+  font-family: "Poppins-Medium";
+  font-size: 16px;
+  color: #5E6282;
+  padding-left: 15px;
+}
+.top-selling ._first {
+  background-image: url("/src/img/top-selling/01.jpg");
+  background-size: 100% 100%;
+}
+.top-selling ._second {
+  background-image: url("/src/img/top-selling/02.jpg");
+  background-size: 100% 100%;
+}
+.top-selling ._third {
+  background-image: url("/src/img/top-selling/03.jpg");
+  background-size: 100% 100%;
+}
+
+/* --------- EASY FAST SECTION -------- */
+.easy-fast {
+  margin-top: 180px;
+  display: flex;
+}
+@media (max-width: 768.98px) {
+  .easy-fast {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+}
+.easy-fast__info {
+  flex-basis: 50%;
+}
+@media (max-width: 768.98px) {
+  .easy-fast__info {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 768.98px) {
+  .easy-fast__header {
+    text-align: center;
+  }
+}
+@media (max-width: 768.98px) {
+  .easy-fast__title {
+    text-align: center;
+  }
+}
+.easy-fast__items {
+  margin-top: 30px;
+}
+.easy-fast__item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 48px;
+}
+.easy-fast__item_info {
+  padding-left: 20px;
+}
+.easy-fast__item_info .item__title {
+  font-family: "Poppins-Bold";
+  font-size: 16px;
+  color: #5E6282;
+}
+.easy-fast__item_icon {
+  padding: 13px;
+}
+.easy-fast__image {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  max-width: 100%;
+  background-image: url("/src/img/easy-fast/bg-small.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right -60px;
+}
+.easy-fast__picture {
+  margin-top: 10%;
+  max-width: 100%;
+}
+.easy-fast .vector_first {
+  background: #F0BB1F;
+  border-radius: 13px;
+}
+.easy-fast .vector_second {
+  background: #F15A2B;
+  border-radius: 13px;
+}
+.easy-fast .vector_third {
+  background: #006380;
+  border-radius: 13px;
+}
+
 /* --------- COMMON CLASSES -------- */
 ._text {
   font-family: "Poppins-Medium";
