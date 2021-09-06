@@ -61,8 +61,7 @@ $md3: 768.98;
 $md4: 479.98;
 
 ._container {
-    max-width: $maxWidthContainer+px;
-    margin-left: 140px;
+    margin-left: 10%;
     @media(max-width:$md3+px) {
         margin: 10px 10px auto 10px;
     }
@@ -73,7 +72,7 @@ $md4: 479.98;
     background-image: url('../img/header/Decore.png');
     background-repeat: no-repeat;
     background-position: right 0px top 0px;
-    background-size: 50% 90%;
+    background-size: 50% 80%;
     @media(max-width:$md3+px) {
         background-image: none;
     }
@@ -82,13 +81,13 @@ $md4: 479.98;
         align-items: center;
         justify-content: space-between;
         padding-top: 10px;
+        margin-right: 10%;
         @media(max-width:$md3+px) {
             margin-top: 0;
         }
         .header__menu {
             display: flex;
             position: relative;
-            margin-right: 4em;
             @media(max-width:$md2+px) {
                 margin-right: 0;
             }
@@ -151,18 +150,26 @@ $md4: 479.98;
                 justify-content: space-between;
                 list-style-type: none;
                 align-items: center;
+                width: auto;
                 @media(max-width:$md3+px){
                     display: block;
                     text-align: center;
                     overflow: auto;
                 }
                 li {
+                    width: auto;
+                    padding: 1em;
+                    @media(max-width:$md2+px) {
+                        padding: 0.4em;
+                    }
+                    @media(max-width:$md3+px){
+                        padding: 0;
+                    }
                     .menu__link {
                         text-decoration: none;
                         font-family: $fontGoogle;
                         font-size: 17px;
                         color: $colorMenu;
-                        margin-right: 2.5rem;
                         @media(max-width:$md3+px){
                             display: flex;
                             justify-content: center;
@@ -190,7 +197,6 @@ $md4: 479.98;
                         }                      
                     } 
                     .menu__dropdown {
-                        margin-left: 3em;
                         @media(max-width:$md3+px){
                             margin: 40px auto;
                         }
@@ -216,20 +222,14 @@ $md4: 479.98;
     }
     .hero {
         display: flex;
-        padding-right: 92px;
+        padding-right: 10%;
+        background-image: url('/src/img/header/traveller.png');
+        background-repeat: no-repeat;
+        background-position: right 0 top 10%;
+        background-position-x: 90%;
         @media(max-width:$md3+px) {
             padding-right: 0;
-        }
-        &__image {
-            flex-basis: 50%;
-            @media(max-width:$md3+px) {
-                flex-basis: 0;
-            }
-            img {
-                width: 100%;
-                height: 80%;
-                padding-top: 30px;
-            }
+            background: none;
         }
         &__content {
             margin-top: 130px;
@@ -360,7 +360,7 @@ $md4: 479.98;
     &__header{
         text-align: center;
         margin-bottom: 10px;
-        padding-right: 100px;
+        padding-right: 10%;
         @media(max-width:$md3+px) {
             padding-right: 0;
         }
@@ -368,7 +368,7 @@ $md4: 479.98;
     &__title{
         text-align: center;
         margin-bottom: 70px;
-        padding-right: 100px;
+        padding-right: 10%;
         @media(max-width:$md3+px) {
             padding-right: 0;
             margin-bottom: 0;
@@ -378,14 +378,13 @@ $md4: 479.98;
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        padding-right: 100px;
+        padding-right: 10%;
         @media(max-width:$md3+px) {
             flex-wrap: wrap;
             padding-right: 0;
         }
         .category__item{
             text-align: center;
-            margin-right: 20px;
             padding: 10px 35px;
             @media(max-width:$md3+px){
                 margin-right: 0;
@@ -409,7 +408,7 @@ $md4: 479.98;
 /* --------- TOP SELLING SECTION -------- */
 .top-selling {
     margin-top: 130px;
-    padding-right: 130px;
+    padding-right: 12%;
     @media(max-width:$md3+px){
         margin-top: 40px;
         padding-right: 0px; 
@@ -447,7 +446,7 @@ $md4: 479.98;
             flex: 0 0 85%;
         }
         &_container {
-            margin-top: 320px;
+            margin-top: 17rem;
             background-color: #fff;
             padding: 25px 20px 30px 20px;
             border-bottom-left-radius: 20px;
@@ -540,17 +539,21 @@ $md4: 479.98;
     }
     &__image {
         display: flex;
+        justify-content: center;
         align-items: center;
         flex-basis: 50%;
         max-width: 100%;
         background-image: url('/src/img/easy-fast/bg-small.png');
-        background-size: 100%;
+        background-size: 80%;
         background-repeat: no-repeat;
-        background-position: right -60px;
+        background-position: top;
     }
     &__picture {
         margin-top: 10%;
-        max-width: 100%;
+        width: 100%;
+        @media(max-width:$md3+px){
+            margin-top: 0;
+        }
     }
     .vector_first {
         background: #F0BB1F;
@@ -566,6 +569,67 @@ $md4: 479.98;
     }
 }
 
+/* --------- LOGOS SECTION -------- */
+.logos{
+    &__items {
+        margin-right: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: auto;
+        background: #FFFFFF;
+        @media(max-width:$md3+px) {
+            margin-right: 0;
+        }
+    }
+    &__item1 {
+        width: 130px;
+        height: 130px;
+        background: url('/src/img/logos/01.svg');
+        mix-blend-mode: luminosity;
+    }
+    &__item2 {
+        width: 172.86px;
+        height: 110px;
+        background: url('/src/img/logos/02.svg');
+        mix-blend-mode: luminosity;
+    }
+    &__item3 {
+        width: 162px;
+        height: 162px;
+        background: url('/src/img/logos/03.svg');
+        mix-blend-mode: luminosity;
+    }
+    &__item4 {
+        width: 162px;
+        height: 32px;
+        background: url('/src/img/logos/04.svg');
+        mix-blend-mode: luminosity;
+    }
+    &__item5 {
+        width: 94px;
+        height: 21px;
+        background: url('/src/img/logos/05.svg');
+        mix-blend-mode: luminosity;
+    }
+    ._logo {
+        &:hover {
+            cursor: pointer;
+            mix-blend-mode: initial;
+        } 
+        @media(max-width:$md3+px) {
+            flex-basis: 50%;
+            background-size: 140px 140px;
+            background-attachment: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            &:last-child {
+                flex-basis: 100%;
+            }
+        }       
+    }
+}
 /* --------- COMMON CLASSES -------- */
 ._text {
     font-family: $fontPopMedium;
