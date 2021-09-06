@@ -167,6 +167,12 @@ body, html {
   font-family: "GoogleSans";
   font-size: 17px;
   color: #212832;
+  transition: color 0.5s;
+}
+@media (min-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body li .menu__link:hover {
+    color: #DF6951;
+  }
 }
 @media (max-width: 768.98px) {
   .header__top-nav .header__menu .menu__body li .menu__link {
@@ -189,12 +195,20 @@ body, html {
   padding: 10px 20px;
   border: 1px solid #212832;
   border-radius: 4px;
+  transition: background-color 0.5s;
 }
 @media (max-width: 768.98px) {
   .header__top-nav .header__menu .menu__body li .menu__btn {
     font-size: 40px;
     margin-left: 0;
     margin-top: 40px;
+  }
+}
+@media (min-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body li .menu__btn:hover {
+    background-color: #DF6951;
+    color: #fff;
+    border: 1px solid #fff;
   }
 }
 @media (max-width: 768.98px) {
@@ -212,10 +226,16 @@ body, html {
   font-family: "GoogleSans";
   color: #212832;
   border: none;
+  transition: color 0.5s;
 }
 @media (max-width: 768.98px) {
   .header__top-nav .header__menu .menu__body li .menu__dropdown .menu__language {
     display: none;
+  }
+}
+@media (min-width: 768.98px) {
+  .header__top-nav .header__menu .menu__body li .menu__dropdown .menu__language:hover {
+    color: #DF6951;
   }
 }
 .header__top-nav .header__menu .menu__body li .menu__dropdown .menu__language:hover {
@@ -681,6 +701,101 @@ body, html {
   .logos ._logo:last-child {
     flex-basis: 100%;
   }
+}
+
+/* --------- SUBSCRIBE SECTION -------- */
+@media (max-width: 768.98px) {
+  .subscribe {
+    margin-top: 50px;
+  }
+}
+@media (min-width: 768.98px) {
+  .subscribe {
+    background: url("/src/img/subscribe/bg.png");
+    background-position: bottom 0 right 3%;
+    background-repeat: no-repeat;
+    padding-bottom: 5%;
+    margin-top: 80px;
+  }
+}
+.subscribe__container {
+  border-radius: 129px 20px 20px 20px;
+  margin-right: 10%;
+  background: #f7f3f7;
+  border: 1px solid white;
+}
+@media (max-width: 768.98px) {
+  .subscribe__container {
+    margin-right: 0;
+    border-radius: 20px;
+  }
+}
+.subscribe__send {
+  position: absolute;
+  right: 7%;
+}
+@media (max-width: 768.98px) {
+  .subscribe__send {
+    display: none;
+  }
+}
+.subscribe__title {
+  font-family: "Poppins-SemiBold";
+  font-size: 33px;
+  color: #5E6282;
+  text-align: center;
+  margin: 3rem 10rem;
+}
+@media (max-width: 768.98px) {
+  .subscribe__title {
+    font-size: 16px;
+    margin: 25px 0;
+  }
+}
+.subscribe__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.subscribe__form_email {
+  display: flex;
+  background-color: #fff;
+  width: 40%;
+  border-radius: 10px;
+}
+@media (max-width: 768.98px) {
+  .subscribe__form_email {
+    flex-basis: 90%;
+    margin-bottom: 20px;
+  }
+}
+.subscribe__form_btn {
+  font-family: "OpenSans";
+  font-size: 17px;
+  padding: 22px 50px;
+  margin-left: 20px;
+  color: #fff;
+  background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+  border-radius: 10px;
+  border-width: 0;
+}
+@media (min-width: 768.98px) {
+  .subscribe__form_btn:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #fd5c21 0%, #b12e1a 100%);
+  }
+}
+.subscribe__icon {
+  padding: 22px 10px;
+}
+.subscribe__input {
+  padding: 22px 0;
+}
+.subscribe__input_field {
+  border: none;
+  width: 100%;
 }
 
 /* --------- COMMON CLASSES -------- */

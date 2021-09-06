@@ -170,6 +170,12 @@ $md4: 479.98;
                         font-family: $fontGoogle;
                         font-size: 17px;
                         color: $colorMenu;
+                        transition: color 0.5s;
+                        @media(min-width:$md3+px) {
+                            &:hover {
+                                color: #DF6951;
+                            }
+                        }
                         @media(max-width:$md3+px){
                             display: flex;
                             justify-content: center;
@@ -190,10 +196,18 @@ $md4: 479.98;
                         padding: 10px 20px;
                         border: 1px solid $colorMenu;
                         border-radius: 4px;
+                        transition: background-color 0.5s;
                         @media(max-width:$md3+px){
                             font-size: 40px;
                             margin-left: 0;
                             margin-top: 40px;
+                        }
+                        @media(min-width:$md3+px) {
+                            &:hover {
+                                background-color: #DF6951;
+                                color: #fff;
+                                border: 1px solid #fff;
+                            }
                         }                      
                     } 
                     .menu__dropdown {
@@ -208,8 +222,14 @@ $md4: 479.98;
                             font-family: $fontGoogle;
                             color: $colorMenu;
                             border: none;
+                            transition: color 0.5s;
                             @media(max-width:$md3+px){
                                 display: none;
+                            }
+                            @media(min-width:$md3+px) {
+                                &:hover {
+                                    color: #DF6951;
+                                }
                             }
                             &:hover {
                                 cursor: pointer;
@@ -630,6 +650,92 @@ $md4: 479.98;
         }       
     }
 }
+
+/* --------- SUBSCRIBE SECTION -------- */
+.subscribe {
+    @media(max-width:$md3+px){
+        margin-top: 50px;
+    }
+    @media(min-width:$md3+px){
+        background:url('/src/img/subscribe/bg.png');
+        background-position: bottom 0 right 3%;
+        background-repeat: no-repeat;
+        padding-bottom: 5%;
+        margin-top: 80px;
+    }
+    &__container {
+         border-radius: 129px 20px 20px 20px;
+         margin-right: 10%;
+         background: #f7f3f7;
+         border: 1px solid rgb(255, 255, 255);
+         @media(max-width:$md3+px){
+             margin-right: 0;
+             border-radius: 20px;
+         }
+    }
+    &__send {
+        position: absolute;
+        right: 7%;
+        @media(max-width:$md3+px){
+            display: none;
+        }
+    }
+    &__title {
+        font-family: $fontPopSemiBold;
+        font-size: 33px;
+        color: #5E6282;
+        text-align: center;
+        margin: 3rem 10rem;
+        @media(max-width:$md3+px){
+            font-size: 16px;
+            margin: 25px 0;
+        }
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        &_email {
+            display: flex;
+            background-color: #fff;
+            width: 40%;
+            border-radius: 10px;
+            @media(max-width:$md3+px){
+                flex-basis: 90%;
+                margin-bottom: 20px;
+            }
+        }
+        &_btn {
+            font-family: $fontOpenSans;
+            font-size: 17px;
+            padding: 22px 50px;
+            margin-left: 20px;
+            color: #fff;
+            background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+            border-radius: 10px;
+            border-width: 0;
+            @media(min-width:$md3+px) {
+                &:hover {
+                    cursor: pointer;
+                    background: linear-gradient(180deg, #fd5c21 0%, #b12e1a 100%);
+                }                
+            }
+        }       
+    }
+    &__icon {
+        padding: 22px 10px;
+    }
+    &__input {
+        padding: 22px 0;
+        &_field {
+            border: none;
+            width: 100%;
+        }
+    }
+}
+
 /* --------- COMMON CLASSES -------- */
 ._text {
     font-family: $fontPopMedium;
