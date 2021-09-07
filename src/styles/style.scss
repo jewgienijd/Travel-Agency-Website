@@ -84,6 +84,7 @@ $md4: 479.98;
         margin-right: 10%;
         @media(max-width:$md3+px) {
             margin-top: 0;
+            margin-right: 0;
         }
         .header__menu {
             display: flex;
@@ -94,7 +95,8 @@ $md4: 479.98;
             .menu__icon {
                 @media(max-width:$md3+px){
                     display: block;
-                    position: relative;
+                    position: fixed;
+                    right: 10px;
                     width: 30px;
                     height: 18px;
                     cursor: pointer;
@@ -142,6 +144,7 @@ $md4: 479.98;
                     overflow: auto;
                     background-color: rgb(255, 255, 255, 0.90);
                     z-index: 10;
+                    display: flex;
                 }
                 &._active {
                     transform: translate(0px,0%);
@@ -174,6 +177,7 @@ $md4: 479.98;
                         @media(min-width:$md3+px) {
                             &:hover {
                                 color: #DF6951;
+                                border-bottom: 2px solid #DF6951;
                             }
                         }
                         @media(max-width:$md3+px){
@@ -217,14 +221,15 @@ $md4: 479.98;
                         .menu__language {
                             appearance: none;
                             background: url('../img/header/vector.png') no-repeat right;
-                            background-position-x: calc(100% - 35px);
+                            background-position-x: calc(100%);
                             font-size: 17px;
                             font-family: $fontGoogle;
                             color: $colorMenu;
                             border: none;
                             transition: color 0.5s;
+                            padding: 10px;
                             @media(max-width:$md3+px){
-                                display: none;
+                                font-size: 40px;
                             }
                             @media(min-width:$md3+px) {
                                 &:hover {
@@ -257,7 +262,8 @@ $md4: 479.98;
             flex-basis: 55%;
             @media(max-width:$md3+px) {
                 flex-basis: 100%;
-                margin-top: 40px;
+                margin-top: 60px;
+                padding-bottom: 30px;
             }
         }
         &__title {
@@ -305,6 +311,7 @@ $md4: 479.98;
             align-items: center;
             @media(max-width:$md3+px) {
                 display: block;
+                margin-top: 20px;
             }
         }
         &__more {
@@ -337,7 +344,7 @@ $md4: 479.98;
             @media(max-width:$md3+px) {
                 width: 80%;
                 justify-content: center;
-                margin-top: 10px;
+                margin-top: 20px;
             }
             &_icon{
                 width: 52px;
@@ -666,12 +673,18 @@ $md4: 479.98;
     &__container {
          border-radius: 129px 20px 20px 20px;
          margin-right: 10%;
-         background: #f7f3f7;
+         background: rgb(223, 215, 249, 0.2);
          border: 1px solid rgb(255, 255, 255);
+         background-image: url('/src/img/subscribe/bg_1.svg'), url('/src/img/subscribe/bg_2.svg');
+         background-repeat: no-repeat;
+         background-position: bottom left, top right;
          @media(max-width:$md3+px){
              margin-right: 0;
              border-radius: 20px;
+             background-image: url('/src/img/subscribe/bg_2.svg');
+             background-position: top right;
          }
+         
     }
     &__send {
         position: absolute;
