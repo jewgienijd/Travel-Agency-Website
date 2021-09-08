@@ -249,7 +249,7 @@ body, html {
 .header .hero {
   display: flex;
   padding-right: 10%;
-  background-image: url("/src/img/header/traveller.png");
+  background-image: url("../img/header/traveller.png");
   background-repeat: no-repeat;
   background-position: right 0 top 10%;
   background-position-x: 90%;
@@ -393,7 +393,7 @@ body, html {
 /* --------- CATEGORY SECTION -------- */
 .category {
   margin-top: 100px;
-  background: url("/src/img/category/bg.png") no-repeat;
+  background: url("../img/category/bg.png") no-repeat;
   background-position: top 0px right 50px;
 }
 @media (max-width: 768.98px) {
@@ -496,7 +496,7 @@ body, html {
 .top-selling__items {
   display: flex;
   margin-bottom: 30px;
-  background: url("/src/img/top-selling/bg.png") no-repeat;
+  background: url("../img/top-selling/bg.png") no-repeat;
   background-position: right;
 }
 @media (max-width: 768.98px) {
@@ -520,8 +520,8 @@ body, html {
   margin-top: 17rem;
   background-color: #fff;
   padding: 25px 20px 30px 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 @media (max-width: 768.98px) {
   .top-selling__item_container {
@@ -555,16 +555,16 @@ body, html {
   padding-left: 15px;
 }
 .top-selling ._first {
-  background-image: url("/src/img/top-selling/01.jpg");
-  background-size: 100% 100%;
+  background-image: url("../img/top-selling/01.jpg");
+  background-size: cover;
 }
 .top-selling ._second {
-  background-image: url("/src/img/top-selling/02.jpg");
-  background-size: 100% 100%;
+  background-image: url("../img/top-selling/02.jpg");
+  background-size: cover;
 }
 .top-selling ._third {
-  background-image: url("/src/img/top-selling/03.jpg");
-  background-size: 100% 100%;
+  background-image: url("../img/top-selling/03.jpg");
+  background-size: cover;
 }
 
 /* --------- EASY FAST SECTION -------- */
@@ -621,7 +621,7 @@ body, html {
   align-items: center;
   flex-basis: 50%;
   max-width: 100%;
-  background-image: url("/src/img/easy-fast/bg-small.png");
+  background-image: url("../img/easy-fast/bg-small.png");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: top;
@@ -666,31 +666,31 @@ body, html {
 .logos__item1 {
   width: 130px;
   height: 130px;
-  background: url("/src/img/logos/01.svg");
+  background: url("../img/logos/01.svg");
   mix-blend-mode: luminosity;
 }
 .logos__item2 {
   width: 172.86px;
   height: 110px;
-  background: url("/src/img/logos/02.svg");
+  background: url("../img/logos/02.svg");
   mix-blend-mode: luminosity;
 }
 .logos__item3 {
   width: 162px;
   height: 162px;
-  background: url("/src/img/logos/03.svg");
+  background: url("../img/logos/03.svg");
   mix-blend-mode: luminosity;
 }
 .logos__item4 {
   width: 162px;
   height: 32px;
-  background: url("/src/img/logos/04.svg");
+  background: url("../img/logos/04.svg");
   mix-blend-mode: luminosity;
 }
 .logos__item5 {
   width: 94px;
   height: 21px;
-  background: url("/src/img/logos/05.svg");
+  background: url("../img/logos/05.svg");
   mix-blend-mode: luminosity;
 }
 .logos ._logo:hover {
@@ -718,7 +718,7 @@ body, html {
 }
 @media (min-width: 768.98px) {
   .subscribe {
-    background: url("/src/img/subscribe/bg.png");
+    background: url("../img/subscribe/bg.png");
     background-position: bottom 0 right 3%;
     background-repeat: no-repeat;
     padding-bottom: 5%;
@@ -730,7 +730,7 @@ body, html {
   margin-right: 10%;
   background: rgba(223, 215, 249, 0.2);
   border: 1px solid white;
-  background-image: url("/src/img/subscribe/bg_1.svg"), url("/src/img/subscribe/bg_2.svg");
+  background-image: url("../img/subscribe/bg_1.svg"), url("../img/subscribe/bg_2.svg");
   background-repeat: no-repeat;
   background-position: bottom left, top right;
 }
@@ -738,7 +738,7 @@ body, html {
   .subscribe__container {
     margin-right: 0;
     border-radius: 20px;
-    background-image: url("/src/img/subscribe/bg_2.svg");
+    background-image: url("../img/subscribe/bg_2.svg");
     background-position: top right;
   }
 }
@@ -947,6 +947,9 @@ body, html {
 }
 .footer__outbound_apps {
   text-align: center;
+}
+.footer__outbound_app {
+  text-decoration: none;
 }
 .footer__rights {
   margin: 80px auto;
